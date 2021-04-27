@@ -1,3 +1,5 @@
+package net.toscalecz.test;
+
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 

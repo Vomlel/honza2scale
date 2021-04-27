@@ -1,3 +1,5 @@
+package net.toscalecz.test;
+
 import javax.swing.plaf.nimbus.State;
 import java.sql.*;
 
