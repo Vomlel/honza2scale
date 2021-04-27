@@ -5,6 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class Hashing {
+
     public static String hashThisString(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-512");

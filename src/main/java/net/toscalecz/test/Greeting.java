@@ -1,2 +1,5 @@
-package net.toscalecz.test;public class Greeting {
+package net.toscalecz.test;
+
+public class Greeting {
+
 }

@@ -1,9 +1,13 @@
 package net.toscalecz.test;
 
-import javax.swing.plaf.nimbus.State;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
+@Deprecated
 public class ControlOfOriginality {
+
     public static boolean checkUserName(String userName, Connection connection) throws SQLException {
         boolean original = true;
         Statement statements = connection.createStatement();

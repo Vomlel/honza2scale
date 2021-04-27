@@ -1,2 +1,5 @@
-package net.toscalecz.test;public class GreetingController {
+package net.toscalecz.test;
+
+public class GreetingController {
+
 }
