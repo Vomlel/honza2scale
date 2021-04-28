@@ -7,16 +7,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-class LoadDatabase {
+public class LoadDatabase {
 
-	private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
+    private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
 
-	@Bean
-	CommandLineRunner initDatabase(UserRepository repository) {
+    @Bean
+    CommandLineRunner initDatabase(UserRepository repository) {
 
-		return args -> {
-			log.info("Preloading " + repository.save(new User("Pepa", "1234")));
-			log.info("Preloading " + repository.save(new User("Pepka","2345")));
-		};
-	}
+        return args -> {
+            log.info("Preloading " + repository.save(new User("Pepa", "1234")));
+            log.info("Preloading " + repository.save(new User("Pepka", "2345")));
+        };
+    }
 }

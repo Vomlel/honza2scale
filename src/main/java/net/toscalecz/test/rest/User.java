@@ -9,19 +9,23 @@ import javax.persistence.Id;
 public class User {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String userName;
     private String password;
 
-    User() {}
+    public User() {
 
-    User(String userName, String password) {
+    }
+
+    public User(String userName, String password) {
         this.userName = userName;
         this.password = password;
     }
 
-    public void setId(Long id) { this.id = id; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public void setUserName(String name) {
         this.userName = userName;
