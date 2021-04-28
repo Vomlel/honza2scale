@@ -21,8 +21,7 @@ public class UserService {
         return userRepository.findAll();
     }
     public User getUserById(long id){
-        //return userRepository.getOne(id);
         List<User> getAll = userRepository.findAll();
-        return getAll.get(1);
+        return getAll.get((int)id-1);
     }
 }

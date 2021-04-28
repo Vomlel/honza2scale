@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body class = "user">
-<p th:text="'Hello, ' + ${user.username} + '!'" />
+<body class = "greeting">
+<p th:text="'Hello, ' + ${user.username} + ' with id ' + ${user.id}" />
 </body>
 </html>
