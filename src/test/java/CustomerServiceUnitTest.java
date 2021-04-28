@@ -1,6 +1,6 @@
 import net.toscalecz.test.Application;
-import net.toscalecz.test.Customer;
-import net.toscalecz.test.CustomerService;
+import net.toscalecz.test.entities.Customer;
+import net.toscalecz.test.services.CustomerService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

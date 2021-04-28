@@ -1,6 +1,9 @@
-package net.toscalecz.test;
+package net.toscalecz.test.services;
 
 import java.util.List;
+
+import net.toscalecz.test.entities.Customer;
+import net.toscalecz.test.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

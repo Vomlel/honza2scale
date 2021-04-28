@@ -1,6 +1,6 @@
 package net.toscalecz.test.rest;
 
-import net.toscalecz.test.Hashing;
+import net.toscalecz.test.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

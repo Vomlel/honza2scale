@@ -1,7 +1,7 @@
 package net.toscalecz.test.controller;
 
-import net.toscalecz.test.rest.User;
-import net.toscalecz.test.rest.UserRepository;
+import net.toscalecz.test.entities.User;
+import net.toscalecz.test.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

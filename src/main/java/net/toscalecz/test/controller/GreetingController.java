@@ -1,4 +1,4 @@
-package net.toscalecz.test;
+package net.toscalecz.test.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 

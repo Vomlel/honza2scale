@@ -1,4 +1,4 @@
-package net.toscalecz.test;
+package net.toscalecz.test.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

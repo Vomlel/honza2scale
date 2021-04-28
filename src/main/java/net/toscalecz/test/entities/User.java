@@ -1,4 +1,4 @@
-package net.toscalecz.test.rest;
+package net.toscalecz.test.entities;
 
 import javax.persistence.*;
 
