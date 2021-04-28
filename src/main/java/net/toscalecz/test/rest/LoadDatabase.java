@@ -1,5 +1,6 @@
 package net.toscalecz.test.rest;
 
+import net.toscalecz.test.Hashing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -14,8 +15,8 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(UserRepository repository) {
         return args -> {
-            log.info("Preloading " + repository.save(new User("Pepa", "1234")));
-            log.info("Preloading " + repository.save(new User("Pepka", "2345")));
+            log.info("Preloading " + repository.save(new User("Pepa", Hashing.hashThisString("1234"))));
+            log.info("Preloading " + repository.save(new User("Pepka", Hashing.hashThisString("2345"))));
         };
     }
 }
