@@ -1,34 +1,28 @@
 package net.toscalecz.test.rest;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String userName;
+    @Column(name = "username", unique = true)
+    private String username;
+    @Column(name = "password")
     private String password;
 
     public User() {
 
     }
 
-    public User(String userName, String password) {
-        this.userName = userName;
-        this.password = password;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
 
-    public void setUserName(String name) {
-        this.userName = userName;
+    public void setUsername(String name) {
+        this.username = name;
     }
 
     public void setPassword(String password) {
@@ -39,8 +33,8 @@ public class User {
         return id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public String getPassword() {

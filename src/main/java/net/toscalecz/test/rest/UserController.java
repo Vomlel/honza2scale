@@ -62,7 +62,7 @@ public class UserController {
     public User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
         return repository.findById(id) //
             .map(user -> {
-                user.setUserName(newUser.getUserName());
+                user.setUsername(newUser.getUsername());
                 user.setPassword(newUser.getPassword());
                 return repository.save(user);
             }) //
