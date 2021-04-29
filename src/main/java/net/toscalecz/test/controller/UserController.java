@@ -1,33 +1,25 @@
 package net.toscalecz.test.controller;
 
-import net.toscalecz.test.Hashing;
 import net.toscalecz.test.UserLogin;
 import net.toscalecz.test.UserRegister;
 import net.toscalecz.test.entities.User;
-import net.toscalecz.test.repositories.UserRepository;
 import net.toscalecz.test.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@RestController //tato trida vytvari rest api
 @RequestMapping("/api/user")
 public class UserController {
 
-    private final UserRepository repository;
     private final UserService userService;
 
     @Autowired
-    public UserController(UserRepository repository, UserService userService) {
-        this.repository = repository;
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 
-    //@GetMapping("/hello")
-    //public String hello(){
-    //    return "Hello Chris!";
-    //}
-    @PostMapping("/login")
-    public User findUser(@RequestBody UserLogin userLogin){
+    @PostMapping("/login")//adresa
+    public User findUser(@RequestBody UserLogin userLogin){//RequestBody je anotace, vezmi to z requestu z frontendu body a zkus to dat do beany userLogin
         return userService.getUserByNamePassword(userLogin.getUserName(), userLogin.getPassword());
     }
     @PostMapping("/register")

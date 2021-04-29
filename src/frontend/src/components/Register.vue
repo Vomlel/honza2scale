@@ -7,7 +7,7 @@
             <input type="text" class="form-control" v-model="userName" placeholder="User name"/>
         </div>
         <div class="form-group">
-            <label>password</label>
+            <label>Password</label>
             <input type="password" class="form-control" v-model="password" placeholder="Password"/>
         </div>
         <button class="btn btn-primary btn-block">Sign up</button>
@@ -40,6 +40,7 @@ export default {
             .then((response) => response.json())
             .then((data) => {
                 this.msg = data.userName + " registered";
+                window.userRegistryIn=data.userName;
                 this.$router.push('/login');
             })
         }

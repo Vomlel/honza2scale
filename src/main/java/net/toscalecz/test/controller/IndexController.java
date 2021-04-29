@@ -1,7 +1,5 @@
 package net.toscalecz.test.controller;
 
-//import guru.springframework.helpers.SpringLoggingHelper;
-
 import net.toscalecz.test.SpringLoggingHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

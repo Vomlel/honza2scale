@@ -10,6 +10,9 @@
             <li class="nav-item">
               <a href="#/register" class="nav-link">Sign up</a>
             </li>
+            <li class="nav-item">
+              <a href="https://docs.google.com/document/d/1BjNjq9LA7J-d9nOAoX4XQg6-AFKkUCbk7vR065tsZss/edit?usp=sharing" target="_blank" class="nav-link">User manual</a>
+            </li>
           </ul>
         </div>
       </div>
