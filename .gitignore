@@ -1,3 +1,5 @@
 target/
 .idea/
 *.iml
+src/target/
+src/frontend/node_modules
