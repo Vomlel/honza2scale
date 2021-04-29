@@ -2,6 +2,7 @@ package net.toscalecz.test.services;
 
 import java.util.List;
 
+import net.toscalecz.test.Hashing;
 import net.toscalecz.test.entities.User;
 import net.toscalecz.test.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,7 @@ public class UserService {
         User user = null;
         while (!found){
             user = getAll.get(i);
-            if (user.getUsername()==userName){
+            if (user.getUserName()==userName){
                 found = true;
             }
         }
@@ -46,7 +47,7 @@ public class UserService {
         User user = null;
         while (!found){
             user = getAll.get(i);
-            if ((user.getUsername()==userName) && (user.getPassword()==password)){
+            if ((user.getUserName()==userName) && (user.getPassword()==password)){
                 found = true;
             }
         }
@@ -54,7 +55,8 @@ public class UserService {
     }
 
     public User createUser(String userName, String password){
-        User user = new User(userName, password);
+        User user = new User(userName, Hashing.hashThisString(password));
+        userRepository.save(user);
         return user;
     }
 }
