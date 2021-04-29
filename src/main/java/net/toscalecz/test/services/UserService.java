@@ -24,4 +24,37 @@ public class UserService {
         List<User> getAll = userRepository.findAll();
         return getAll.get((int)id-1);
     }
+
+    public User getUserByName(String userName){
+        List<User> getAll = userRepository.findAll();
+        boolean found = false;
+        int i = 0;
+        User user = null;
+        while (!found){
+            user = getAll.get(i);
+            if (user.getUsername()==userName){
+                found = true;
+            }
+        }
+        return user;
+    }
+
+    public User getUserByNamePassword(String userName, String password){
+        List<User> getAll = userRepository.findAll();
+        boolean found = false;
+        int i = 0;
+        User user = null;
+        while (!found){
+            user = getAll.get(i);
+            if ((user.getUsername()==userName) && (user.getPassword()==password)){
+                found = true;
+            }
+        }
+        return user;
+    }
+
+    public User createUser(String userName, String password){
+        User user = new User(userName, password);
+        return user;
+    }
 }
