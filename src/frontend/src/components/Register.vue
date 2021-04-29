@@ -39,7 +39,8 @@ export default {
             fetch("/api/user/register", request)
             .then((response) => response.json())
             .then((data) => {
-                this.msg = data.userName + " registered ";
+                this.msg = data.userName + " registered";
+                this.$router.push('/login');
             })
         }
     }

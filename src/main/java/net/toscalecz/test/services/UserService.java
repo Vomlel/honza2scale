@@ -28,30 +28,32 @@ public class UserService {
 
     public User getUserByName(String userName){
         List<User> getAll = userRepository.findAll();
-        boolean found = false;
         int i = 0;
-        User user = null;
-        while (!found){
+        int max = getAll.size();
+        User user;
+        while (i<max){
             user = getAll.get(i);
-            if (user.getUserName()==userName){
-                found = true;
+            if (user.getUserName().equals(userName)){
+                return user;
             }
+            i += 1;
         }
-        return user;
+        return null;
     }
 
     public User getUserByNamePassword(String userName, String password){
         List<User> getAll = userRepository.findAll();
-        boolean found = false;
         int i = 0;
-        User user = null;
-        while (!found){
+        int max = getAll.size();
+        User user;
+        while (i<max){
             user = getAll.get(i);
-            if ((user.getUserName()==userName) && (user.getPassword()==password)){
-                found = true;
+            if ((user.getUserName().equals(userName)) && (user.getPassword().equals(Hashing.hashThisString(password)))) {
+                return user;
             }
+            i += 1;
         }
-        return user;
+        return null;
     }
 
     public User createUser(String userName, String password){
