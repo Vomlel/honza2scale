@@ -1,6 +1,5 @@
-package net.toscalecz.test.controller;
+package net.toscalecz.test.unused;
 
-import net.toscalecz.test.SpringLoggingHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

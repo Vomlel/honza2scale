@@ -25,23 +25,23 @@ export default {
         }
     },
     methods: {
-        handleSubmit(){
+        handleSubmit(){ //for submitting
             const data = {
                 userName: this.userName,
                 password: this.password
             };
-            console.log(data);
-            const request ={
+            console.log(data); //check if we have data from properties
+            const request ={ //creating request data for backend
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(data)
             }
-            fetch("/api/user/register", request)
-            .then((response) => response.json())
+            fetch("/api/user/register", request) //this goes to backend
+            .then((response) => response.json()) //this is what comes from backend UserController //TODO - just recieve boolean value (and maybe reason if is not created) BUG #2
             .then((data) => {
-                this.msg = data.userName + " registered";
+                this.msg = data.userName + " registered"; //missing if like in Login.vue Bug #9
                 window.userRegistryIn=data.userName;
-                this.$router.push('/login');
+                this.$router.push('/login'); //go to login page
             })
         }
     }

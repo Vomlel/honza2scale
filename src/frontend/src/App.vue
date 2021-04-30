@@ -10,8 +10,7 @@
 </template>
 
 <script>
-  import Nav from './components/Nav.vue'
-  //import axios from 'axios'
+  import Nav from './components/Nav.vue' //importing just Nav component. Body creates router.
 
 export default {
   name: 'App',

@@ -1,4 +1,4 @@
-package net.toscalecz.test.controller;
+package net.toscalecz.test.unused;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import net.toscalecz.test.entities.User;
 import net.toscalecz.test.repositories.UserRepository;
-import net.toscalecz.test.rest.UserNotFoundException;
+import net.toscalecz.test.unused.rest.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;

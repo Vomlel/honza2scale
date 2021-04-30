@@ -1,0 +1,1 @@
+findUser method from UserController should send just boolean value to frontend.

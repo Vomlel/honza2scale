@@ -1,0 +1,1 @@
+getUserByName method from UserService can work better.

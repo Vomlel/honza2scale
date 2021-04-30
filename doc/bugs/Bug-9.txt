@@ -1,0 +1,1 @@
+in Register.vue missing if like it is in Login.vue.

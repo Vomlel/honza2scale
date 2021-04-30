@@ -1,0 +1,1 @@
+AddUserToDatabase class have to use database from config.

@@ -1,4 +1,4 @@
-package net.toscalecz.test.controller;
+package net.toscalecz.test.unused;
 
 import net.toscalecz.test.entities.User;
 import net.toscalecz.test.repositories.UserRepository;

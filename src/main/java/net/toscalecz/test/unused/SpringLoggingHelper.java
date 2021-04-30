@@ -1,4 +1,4 @@
-package net.toscalecz.test;
+package net.toscalecz.test.unused;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

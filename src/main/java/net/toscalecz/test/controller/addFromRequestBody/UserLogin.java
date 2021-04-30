@@ -1,5 +1,6 @@
-package net.toscalecz.test;
+package net.toscalecz.test.controller.addFromRequestBody;
 
+//add from request body from frontend Login.vue
 public class UserLogin {
     private String userName;
     private String password;

@@ -1,0 +1,1 @@
+createUser method from UserController should send just boolean value to frontend. Maybe reason if user is not created too.

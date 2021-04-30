@@ -1,3 +1,5 @@
+package unused;
+
 import net.toscalecz.test.Application;
 import org.junit.Assert;
 import org.junit.Test;

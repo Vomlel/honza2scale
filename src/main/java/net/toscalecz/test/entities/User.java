@@ -1,7 +1,8 @@
 package net.toscalecz.test.entities;
 
 import javax.persistence.*;
-//tato entita je pro cteni a ukladani databazove tabulku user a zaroven ji vracim v rest api
+
+//This entity is for manipulating with user table from databese and also she is sending from rest api to frontend
 @Entity
 public class User {
 

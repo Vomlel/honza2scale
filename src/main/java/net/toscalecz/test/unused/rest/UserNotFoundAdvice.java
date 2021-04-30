@@ -1,4 +1,4 @@
-package net.toscalecz.test.rest;
+package net.toscalecz.test.unused.rest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

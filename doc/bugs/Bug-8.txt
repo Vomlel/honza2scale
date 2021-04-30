@@ -1,0 +1,1 @@
+window is bad way how to define constant. Find other way.

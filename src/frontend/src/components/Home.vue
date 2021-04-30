@@ -11,7 +11,7 @@
             }
         },
         mounted() {
-            this.msg=window.userLoginIn
+            this.msg=window.userLoginIn //If is user login in, in body of home module is greetings to user.
         }
     }
 

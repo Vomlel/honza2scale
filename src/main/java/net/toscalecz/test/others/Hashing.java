@@ -1,9 +1,11 @@
-package net.toscalecz.test;
+package net.toscalecz.test.others;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+//This code is for hashing strings. SHA-512.
+//TODO better security BUG #3
 public class Hashing {
 
     public static String hashThisString(String input) {

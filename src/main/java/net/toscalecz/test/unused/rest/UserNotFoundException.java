@@ -1,4 +1,4 @@
-package net.toscalecz.test.rest;
+package net.toscalecz.test.unused.rest;
 
 public class UserNotFoundException extends RuntimeException {
 

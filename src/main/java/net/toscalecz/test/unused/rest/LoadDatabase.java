@@ -1,4 +1,4 @@
-package net.toscalecz.test.rest;
+package net.toscalecz.test.unused.rest;
 
 import net.toscalecz.test.repositories.UserRepository;
 import org.slf4j.Logger;
