@@ -39,10 +39,10 @@ export default {
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(data)
             }
-            fetch("/api/user/login", request) //this goes to backend
+            fetch("/api/vfapa2/api/rest/clearcache", request) //this goes to backend
             .then((response) => response.json()) //this is what comes from backend //TODO - just recieve boolean value BUG #1
             .then((data) => {
-                if(data.userName==this.userName) { //if user with userName and password Exists
+                if(data.userName === this.userName) { //if user with userName and password Exists
                     window.userLoginIn = data.userName; //better define global constant BUG #8
                     this.msg = data.userName + " welcome!"; //TODO - this doent have to be here BUG #7 
                     this.$router.push('/'); //go to home
