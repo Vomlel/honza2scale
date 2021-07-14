@@ -10,7 +10,7 @@
             <label>Password</label>
             <input type="password" class="form-control" v-model="password" placeholder="Password"/>
         </div>
-        <button class="btn btn-primary btn-block">Login</button>
+        <button class="btn btn-primary btn-block" type="submit">Login</button>
     </form>
 </template> //html sablona
 
@@ -29,17 +29,18 @@ export default {
     },
     methods: {
         handleSubmit() { //for submitting
+          console.log("test")
             const data = {
                 userName: this.userName,
                 password: this.password
             };
             console.log(data); //check if we have data from properties
             const request = { //creating request data for backend
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(data)
+                method: "GET",
+                headers: {"Content-Type": "application/json"}
+                //body: JSON.stringify(data)
             }
-            fetch("/api/vfapa2/api/rest/clearcache", request) //this goes to backend
+            fetch("http://localhost:8080/vfapa2/api/rest/payment/config", request) //this goes to backend
             .then((response) => response.json()) //this is what comes from backend //TODO - just recieve boolean value BUG #1
             .then((data) => {
                 if(data.userName === this.userName) { //if user with userName and password Exists
