@@ -29,23 +29,23 @@ export default {
     },
     methods: {
         handleSubmit() { //for submitting
-          console.log("test")
+          console.log("test");
             const data = {
                 userName: this.userName,
                 password: this.password
             };
             console.log(data); //check if we have data from properties
             const request = { //creating request data for backend
-                method: "GET",
-                headers: {"Content-Type": "application/json"}
-                //body: JSON.stringify(data)
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(data)
             }
-            fetch("http://localhost:8080/vfapa2/api/rest/payment/config", request) //this goes to backend
+            fetch("/api/user/login", request) //this goes to backend
             .then((response) => response.json()) //this is what comes from backend //TODO - just recieve boolean value BUG #1
             .then((data) => {
                 if(data.userName === this.userName) { //if user with userName and password Exists
                     window.userLoginIn = data.userName; //better define global constant BUG #8
-                    this.msg = data.userName + " welcome!"; //TODO - this doent have to be here BUG #7 
+                    this.msg = data.userName + " welcome!"; //TODO - this doesn't have to be here BUG #7
                     this.$router.push('/'); //go to home
                 } else {
                     this.msg = "Wrong user name or password";
